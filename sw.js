@@ -1,5 +1,5 @@
 // Service worker: app shell cache-first; plan.json network-first (siempre fresco si hay conexión).
-const VERSION = "entreno-v2";
+const VERSION = "entreno-v3";
 const SHELL = ["./", "index.html", "styles.css", "app.js", "logic.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "plan.json"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

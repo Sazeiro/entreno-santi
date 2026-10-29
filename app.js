@@ -60,8 +60,9 @@ function cabecera(d) {
 }
 
 function avisoInicio() {
-  if (plan.config.inicioPlanConfirmado) return "";
-  return `<section class="card aviso"><b>Fecha de inicio a confirmar:</b> el plan está calculado arrancando el ${fechaLinda(plan.config.inicioPlan)}. Si el staff confirma otra fecha, se actualiza y todo se recalcula solo.</section>`;
+  const cal = plan.config.notaCalendario ? `<section class="card"><p class="nota">${txt(plan.config.notaCalendario)}</p></section>` : "";
+  if (plan.config.inicioPlanConfirmado) return cal;
+  return cal + `<section class="card aviso"><b>Fecha de inicio a confirmar:</b> el plan está calculado arrancando el ${fechaLinda(plan.config.inicioPlan)}. Si el staff confirma otra fecha, se actualiza y todo se recalcula solo.</section>`;
 }
 
 function vistaDia(d) {
