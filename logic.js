@@ -76,7 +76,7 @@ function campoDe(fase, semanaFase, dia, plan, especial) {
       return {
         planId: c.plan, nombre: p.nombre, sesionesPorSemana: p.sesionesPorSemana, semanaPlan,
         totalSemanas: p.opciones[0].semanas.length,
-        opciones: p.opciones.map((o, i) => ({ n: i + 1, nombre: o.nombre, texto: o.semanas[semanaPlan - 1] || "a confirmar" })),
+        nota: p.nota || null, opciones: p.opciones.map((o, i) => ({ n: i + 1, nombre: o.nombre, texto: o.semanas[semanaPlan - 1] || "a confirmar" })),
       };
     }
   }

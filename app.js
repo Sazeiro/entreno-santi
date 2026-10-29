@@ -46,7 +46,7 @@ function campoCard(d) {
     ${c.opciones.map((o) => `<label class="opc${done.includes(o.n) ? " hecha" : ""}${!listo && sug && sug.n === o.n ? " sug" : ""}">
       <input type="checkbox" data-op="${o.n}" ${done.includes(o.n) ? "checked" : ""}>
       <span class="t"><span class="n">Opción ${o.n} · ${esc(o.nombre)}${!listo && sug && sug.n === o.n ? " — sugerida hoy" : ""}</span><br>${txt(o.texto)}</span></label>`).join("")}
-    <p class="nota">Marcá la que hiciste; se guarda en este teléfono.</p></section>`;
+    ${c.nota ? `<p class="nota">${txt(c.nota)}</p>` : ""}<p class="nota">Marcá la que hiciste; se guarda en este teléfono.</p></section>`;
 }
 
 function cabecera(d) {

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "actualizado": "2026-10-29",
-  "fuente": "Planificación física · Plantel Superior · Postemporada 2026 / Pretemporada 2027 (San Carlos), vía Canvas de referencia del Personal Trainer",
+  "fuente": "Club San Carlos · Planificación física Plantel Superior · Postemporada 2026 / Pretemporada 2027 (PDF del staff, versión actualizada)",
   "config": {
     "inicioPlan": "2026-11-09",
     "inicioPlanConfirmado": false,
@@ -12,12 +12,13 @@
     "activacion": {
       "titulo": "Activación y potencia",
       "lista": [
-        "Activación: escalerita de coordinación y escalerita multidirección.",
-        "Potencia (3 x 6 series): cambios con disco y lanzamientos de balón medicinal.",
-        "Auxiliar 1 (3 x 6): zona media y tren superior secundario, con inclinado, remo bajo, bíceps, tríceps, vuelos, trapecio, puentes, abdominales, espinales y rotaciones.",
-        "Auxiliar 2 (3 x 6): zona media y tren inferior secundario, con subidas, estocadas, puente de glúteos y abdominales reactivos, más cuello con press Pallof de 20 seg."
+        "Potencia (3 x 6 series): escalerita de coordinación (escalerita multidirección).",
+        "Potencia (3 x 6 series): cambios con disco.",
+        "Potencia (3 x 6 series): lanzamientos de balón medicinal.",
+        "Auxiliar 1 (3 x 6 series), en este orden: 1) zona media, 2) tren superior secundario, 3) zona media, 4) tren superior secundario. Ejemplos: inclinado, remo bajo, bíceps, tríceps, vuelos, remo, trapecio, puentes, abdominales, espinales, rotaciones, etc.",
+        "Auxiliar 2 (3 x 6 series), en este orden: 1) zona media, 2) tren inferior secundario, 3) zona media, 4) tren inferior secundario, 5) cuello + press Pallof 20 seg. Ejemplos: subidas, estocadas, puente de glúteos, abdominales reactivos, rotaciones, etc. Cuello: con banda, en banco o con collarín, etc."
       ],
-      "nota": "Cargas y orden exacto dentro de cada auxiliar: a confirmar."
+      "nota": "Secuencia general: respetá las series y alternativas indicadas en la planificación del staff."
     }
   },
   "campoProgramado": {
@@ -25,79 +26,117 @@
       "nombre": "Plan 3 días por semana (4 semanas)",
       "sesionesPorSemana": 3,
       "opciones": [
-        { "nombre": "Tempo running", "semanas": [
-          "Tempo running: 20 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 30 seg de pausa.",
-          "Tempo running: 10 pasadas x 110 m en 20 seg x 20 seg de pausa, más 10 pasadas x 110 m en 20 seg x 30 seg de pausa.",
-          "Igual que la semana 2, pero las 20 pasadas arrancan desde el piso, boca abajo o boca arriba.",
-          "Igual que la semana 3: 10 pasadas en 20 x 20 más 10 pasadas en 20 x 30, arrancando desde el piso."
-        ] },
-        { "nombre": "Estaciones", "semanas": [
-          "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 20 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, etc.).",
-          "Estaciones de 30 x 30 durante 20 min.",
-          "Estaciones de 30 x 30 durante 25 min.",
-          "Estaciones de 30 x 30 durante 25 min, sumando correr."
-        ] },
-        { "nombre": "Barrancas", "semanas": [
-          "Subir fuerte y bajar caminando haciendo barrancas hasta sumar 1500 m (15 de 100 m o 30 de 50 m).",
-          "Barrancas: sumar 1500 m (15 de 100 m o 30 de 50 m).",
-          "Barrancas: sumar 2000 m (20 de 100 m o 40 de 50 m).",
-          "Barrancas: sumar 2000 m (20 de 100 m o 40 de 50 m)."
-        ] },
-        { "nombre": "Deporte intenso", "semanas": [
-          "Deporte en forma intensa, al menos 45 min.",
-          "Deporte en forma intensa, al menos 45 min.",
-          "Deporte en forma intensa, al menos 45 min.",
-          "Deporte en forma intensa, al menos 45 min."
-        ] },
-        { "nombre": "Pileta", "semanas": [
-          "Pileta: 3 pasadas de 100 m en el mejor tiempo posible con 3 min de pausa, más 5 bloques de flotación de 30 x 30 seg, 4 bloques de 30 x 30 sin una mano y 3 bloques de 20 x 20 sin manos.",
-          "Pileta: igual que la semana 1 (3 pasadas de 100 m más los bloques de flotación).",
-          "Pileta: 4 pasadas de 100 m en el mejor tiempo posible con 3 min de pausa, más los mismos bloques de flotación.",
-          "Pileta: 4 pasadas de 100 m en el mejor tiempo posible con 3 min de pausa, más los mismos bloques de flotación."
-        ] },
-        { "nombre": "Bronco fraccionado", "semanas": [
-          "Bronco fraccionado: 3 series de 4 pasadas saliendo cada 1'40\", con macro pausa de 3 min.",
-          "Bronco fraccionado: 3 series de 4 pasadas saliendo cada 1'30\", con macro pausa de 2'30\".",
-          "Bronco fraccionado: 2 series de 6 pasadas saliendo cada 1'30\", con macro pausa de 3 min.",
-          "Bronco fraccionado: 2 series de 8 pasadas saliendo cada 1'30\", con macro pausa de 3 min."
-        ] }
-      ]
+        {
+          "nombre": "Tempo running",
+          "semanas": [
+            "Tempo running: 20 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 30 seg de pausa.",
+            "Tempo running: 10 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 20 seg de pausa, más 10 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 30 seg de pausa.",
+            "Tempo running: 10 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 20 seg de pausa, más 10 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 30 seg de pausa. Las 20 pasadas arrancan desde el piso, boca abajo o boca arriba.",
+            "Tempo running: 10 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 20 seg de pausa, más 10 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 30 seg de pausa. Las 20 pasadas arrancan desde el piso, boca abajo o boca arriba."
+          ]
+        },
+        {
+          "nombre": "Estaciones",
+          "semanas": [
+            "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 20 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, etc.).",
+            "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 20 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, etc.).",
+            "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 25 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, etc.).",
+            "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 25 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, correr, etc.)."
+          ]
+        },
+        {
+          "nombre": "Barrancas",
+          "semanas": [
+            "Subir fuerte y bajar caminando haciendo barrancas. Tenés que sumar 1500 m: si son barrancas de 100 m hacés 15, si son de 50 m hacés 30.",
+            "Subir fuerte y bajar caminando haciendo barrancas. Tenés que sumar 1500 m: si son barrancas de 100 m hacés 15, si son de 50 m hacés 30.",
+            "Subir fuerte y bajar caminando haciendo barrancas. Tenés que sumar 2000 m: si son barrancas de 100 m hacés 20, si son de 50 m hacés 40.",
+            "Subir fuerte y bajar caminando haciendo barrancas. Tenés que sumar 2000 m: si son barrancas de 100 m hacés 20, si son de 50 m hacés 40."
+          ]
+        },
+        {
+          "nombre": "Deporte intenso",
+          "semanas": [
+            "Deporte en forma intensa, al menos 45 min.",
+            "Deporte en forma intensa, al menos 45 min.",
+            "Deporte en forma intensa, al menos 45 min.",
+            "Deporte en forma intensa, al menos 45 min."
+          ]
+        },
+        {
+          "nombre": "Pileta",
+          "semanas": [
+            "Pileta: 3 pasadas de 100 m en el mejor tiempo posible x 3 min de pausa, más 5 bloques de flotación de 30 x 30 seg, más 4 bloques de flotación de 30 x 30 seg sin una mano, más 3 bloques de flotación de 20 x 20 seg sin manos.",
+            "Pileta: 3 pasadas de 100 m en el mejor tiempo posible x 3 min de pausa, más 5 bloques de flotación de 30 x 30 seg, más 4 bloques de flotación de 30 x 30 seg sin una mano, más 3 bloques de flotación de 20 x 20 seg sin manos.",
+            "Pileta: 4 pasadas de 100 m en el mejor tiempo posible x 3 min de pausa, más 5 bloques de flotación de 30 x 30 seg, más 4 bloques de flotación de 30 x 30 seg sin una mano, más 3 bloques de flotación de 20 x 20 seg sin manos.",
+            "Pileta: 4 pasadas de 100 m en el mejor tiempo posible x 3 min de pausa, más 5 bloques de flotación de 30 x 30 seg, más 4 bloques de flotación de 30 x 30 seg sin una mano, más 3 bloques de flotación de 20 x 20 seg sin manos."
+          ]
+        },
+        {
+          "nombre": "Bronco fraccionado",
+          "semanas": [
+            "Bronco fraccionado: 3 series de 4 pasadas saliendo cada 1'40\", macro pausa de 3 min.",
+            "Bronco fraccionado: 3 series de 4 pasadas saliendo cada 1'30\", macro pausa de 2'30\".",
+            "Bronco fraccionado: 2 series de 6 pasadas saliendo cada 1'30\", macro pausa de 3 min.",
+            "Bronco fraccionado: 2 series de 8 pasadas saliendo cada 1'30\", macro pausa de 3 min."
+          ]
+        }
+      ],
+      "nota": "Plan de postemporada: consultá la opción indicada por el staff. Cada día tiene 6 opciones; no repitas opciones."
     },
     "p4": {
       "nombre": "Plan 4 días por semana (3 semanas)",
       "sesionesPorSemana": 4,
       "opciones": [
-        { "nombre": "Aceleraciones / tempo", "semanas": [
-          "Aceleraciones: 4 bloques de 10 aceleraciones a máxima velocidad (primeras y segundas líneas 10 m; terceras, medios y centros 15 m; wines y fullback 20 m). 5 seg de trabajo x 40 seg, con 3 min de pausa entre bloques.",
-          "Aceleraciones: igual que la semana 1.",
-          "Tempo running: 15 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg x 20 seg de pausa."
-        ] },
-        { "nombre": "Estaciones", "semanas": [
-          "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 30 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, correr, etc.).",
-          "Estaciones de 30 x 30 durante 30 min.",
-          "Estaciones de 30 x 30 durante 20 min."
-        ] },
-        { "nombre": "Pasadas / fartlek", "semanas": [
-          "10 pasadas de 300 m: primeras y segundas en 1'20\", terceras y backs en 1'10\". Pausa de 1 min.",
-          "7 pasadas de 600 m: primeras y segundas en 2'30\", terceras y backs en 2'15\". Pausa de 1 min.",
-          "Fartlek: 3 bloques de 7 min con 2 min de pausa. Bloque 1: 30 x 30 seg. Bloque 2: 40 x 20 seg. Bloque 3: 30 x 30 seg."
-        ] },
-        { "nombre": "Deporte intenso", "semanas": [
-          "Deporte en forma intensa, al menos 45 min.",
-          "Deporte en forma intensa, al menos 45 min.",
-          "Deporte en forma intensa, al menos 45 min."
-        ] },
-        { "nombre": "Pileta", "semanas": [
-          "Pileta: 10 pasadas de 50 m a máxima intensidad con 1'30\" de pausa.",
-          "Pileta: 14 pasadas de 50 m a máxima intensidad con 1'30\" de pausa.",
-          "Pileta: 3 pasadas de 100 m en el mejor tiempo posible con 3 min de pausa, más 5 bloques de flotación de 30 x 30, 4 bloques de 30 x 30 sin una mano y 3 bloques de 20 x 20 sin manos."
-        ] },
-        { "nombre": "Bronco fraccionado", "semanas": [
-          "Bronco fraccionado: 2 series de 5 pasadas saliendo cada 1'20\", con macro pausa de 3 min.",
-          "Bronco fraccionado: 10 pasadas saliendo cada 1'30\".",
-          "Deporte en forma intensa, al menos 45 min."
-        ] }
-      ]
+        {
+          "nombre": "Aceleraciones / tempo",
+          "semanas": [
+            "Trabajo de aceleraciones: 4 bloques de 10 aceleraciones a máxima velocidad. Primeras y segundas líneas 10 m; terceras, medios y centros 15 m; wings y fullback 20 m. Tiempo de trabajo 5 seg x 40 seg, más 3 min de pausa entre bloques.",
+            "Trabajo de aceleraciones: 4 bloques de 10 aceleraciones a máxima velocidad. Primeras y segundas líneas 10 m; terceras, medios y centros 15 m; wings y fullback 20 m. Tiempo de trabajo 5 seg x 40 seg, más 3 min de pausa entre bloques.",
+            "Tempo running: 15 pasadas x 110 m (ir y volver a 5 + toda la cancha) en 20 seg de trabajo x 20 seg de pausa."
+          ]
+        },
+        {
+          "nombre": "Estaciones",
+          "semanas": [
+            "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 30 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, correr, etc.).",
+            "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 30 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, correr, etc.).",
+            "Estaciones de 30 seg de trabajo x 30 seg de pausa durante 20 min (piso/levanto, cuadrupedia, lanzamientos, boxeo con peso, etc.)."
+          ]
+        },
+        {
+          "nombre": "Pasadas / fartlek",
+          "semanas": [
+            "10 pasadas de 300 m: primeras y segundas en 1'20\", terceras y backs en 1'10\". La pausa es de 1 min.",
+            "7 pasadas de 600 m: primeras y segundas en 2'30\", terceras y backs en 2'15\". La pausa es de 1 min.",
+            "Fartlek: 3 bloques de 7 min, con 2 min de pausa entre bloques. Bloque 1: 30 x 30 seg. Bloque 2: 40 x 20 seg. Bloque 3: 30 x 30 seg."
+          ]
+        },
+        {
+          "nombre": "Deporte intenso",
+          "semanas": [
+            "Deporte en forma intensa, al menos 45 min.",
+            "Deporte en forma intensa, al menos 45 min.",
+            "Deporte en forma intensa, al menos 45 min."
+          ]
+        },
+        {
+          "nombre": "Pileta",
+          "semanas": [
+            "Pileta: 10 pasadas de 50 m a máxima intensidad x 1'30\" de pausa.",
+            "Pileta: 14 pasadas de 50 m a máxima intensidad x 1'30\" de pausa.",
+            "Pileta: 3 pasadas de 100 m en el mejor tiempo posible x 3 min de pausa, más 5 bloques de flotación de 30 x 30 seg, más 4 bloques de flotación de 30 x 30 seg sin una mano, más 3 bloques de flotación de 20 x 20 seg sin manos."
+          ]
+        },
+        {
+          "nombre": "Bronco fraccionado",
+          "semanas": [
+            "Bronco fraccionado: 2 series de 5 pasadas saliendo cada 1'20\", macro pausa de 3 min.",
+            "Bronco fraccionado: 10 pasadas saliendo cada 1'30\".",
+            "Deporte en forma intensa, al menos 45 min."
+          ]
+        }
+      ],
+      "nota": "Plan de postemporada: consultá la opción indicada por el staff. Cada día tiene 6 opciones; no repitas opciones."
     }
   },
   "fases": [
@@ -114,90 +153,251 @@
       "tipo": "entrenamiento",
       "inicio": "@inicioPlan",
       "descripcion": "Noviembre-diciembre 2026: 4 días de gimnasio por semana + campo.",
-      "descansoSeries": "Descanso entre series: hombros, bíceps y tríceps 90 seg; pecho, espalda y piernas 120 seg.",
+      "descansoSeries": "Descanso entre series: pecho, espalda y piernas 120 seg; hombros, bíceps y tríceps 90 seg.",
       "aConfirmar": [
         "Qué día de la semana va cada sesión (por defecto: Día 1 lunes, Día 2 martes, Día 3 jueves, Día 4 viernes).",
-        "Qué semanas usan el plan de campo de 3 días y cuáles el de 4 días (por defecto: semanas 1-4 plan 3 días, semanas 5-7 plan 4 días; semana 8 sin campo programado)."
+        "Qué semanas usan el plan de campo de 3 días y cuáles el de 4 días: el PDF no lo indica (por defecto: semanas 1-4 plan 3 días, semanas 5-7 plan 4 días; semana 8 sin campo programado)."
       ],
-      "semanaTipo": { "lun": "D1", "mar": "D2", "mie": null, "jue": "D3", "vie": "D4", "sab": null, "dom": null },
-      "diasCampo": ["lun", "mar", "mie", "jue", "vie", "sab"],
+      "semanaTipo": {
+        "lun": "D1",
+        "mar": "D2",
+        "mie": null,
+        "jue": "D3",
+        "vie": "D4",
+        "sab": null,
+        "dom": null
+      },
+      "diasCampo": [
+        "lun",
+        "mar",
+        "mie",
+        "jue",
+        "vie",
+        "sab"
+      ],
       "campoProgramado": [
-        { "semanas": [1, 4], "plan": "p3" },
-        { "semanas": [5, 7], "plan": "p4" }
+        {
+          "semanas": [
+            1,
+            4
+          ],
+          "plan": "p3"
+        },
+        {
+          "semanas": [
+            5,
+            7
+          ],
+          "plan": "p4"
+        }
       ],
       "sesiones": {
         "D1": {
           "titulo": "Día 1",
           "tipoDia": "fuerza+campo",
           "bloques": [
-            { "ref": "activacion" },
-            { "titulo": "Gimnasio", "filas": [
-              ["Plano", "4 x 6 al 80% 1RM"],
-              ["Inclinado", "4 x 8"],
-              ["Flexiones con peso", "Según indicación del staff"],
-              ["Pullover", "4 x 8 + 20 seg"],
-              ["Cuello con banda lateral", "Según indicación del staff"],
-              ["Bíceps con mancuernas", "4 x 8"],
-              ["Puente de glúteo en banco", "Según indicación del staff"],
-              ["Bíceps con barra", "4 x 15"]
-            ] },
-            { "titulo": "Campo del día", "texto": "2 bloques continuos de 12 min con 2 min de pausa, al 60% de ingoal a ingoal. En uno, sentadillas con disco en la cabeza (10 + 10 seg); en el otro, 30 abdominales + 10 seg." }
+            {
+              "ref": "activacion"
+            },
+            {
+              "titulo": "Gimnasio",
+              "filas": [
+                [
+                  "Plano",
+                  "4 x 6 al 80% 1RM"
+                ],
+                [
+                  "Inclinado",
+                  "4 x 8"
+                ],
+                [
+                  "Flexiones con peso",
+                  "4 x 8"
+                ],
+                [
+                  "Pullover",
+                  "4 x 8"
+                ],
+                [
+                  "Cuello con banda lateral",
+                  "4 x 8 + 20 seg"
+                ],
+                [
+                  "Bíceps con mancuernas",
+                  "4 x 8"
+                ],
+                [
+                  "Puente de glúteo en banco",
+                  "4 x 8"
+                ],
+                [
+                  "Bíceps con barra",
+                  "4 x 15"
+                ]
+              ]
+            },
+            {
+              "titulo": "Campo del día",
+              "texto": "2 bloques continuos de 12 min con 2 min de pausa: al 60%, de ingoal a ingoal. En uno, sentadillas con disco en la cabeza 10 + 10 seg; en el otro, 30 abdominales + 10 seg."
+            }
           ]
         },
         "D2": {
           "titulo": "Día 2",
           "tipoDia": "fuerza+campo",
           "bloques": [
-            { "ref": "activacion" },
-            { "titulo": "Gimnasio", "filas": [
-              ["Dominadas", "4 con peso + 4 sin peso"],
-              ["Remo bajo con barra", "4 x 8"],
-              ["Remo alto", "Según indicación del staff"],
-              ["Trapecio", "4 x 8"],
-              ["Vuelos posteriores", "Según indicación del staff"],
-              ["Tríceps en fondos", "4 x 8"],
-              ["Estocadas fijas", "Según indicación del staff"],
-              ["Tríceps francés", "4 x 15"]
-            ] },
-            { "titulo": "Campo del día", "texto": "Estocadas lentas caminando con disco: 3 bloques de 7 min con 3 min de pausa." }
+            {
+              "ref": "activacion"
+            },
+            {
+              "titulo": "Gimnasio",
+              "filas": [
+                [
+                  "Dominadas",
+                  "4 con peso + 4 sin peso"
+                ],
+                [
+                  "Remo bajo 1 B",
+                  "4 x 8"
+                ],
+                [
+                  "Remo alto",
+                  "4 x 8"
+                ],
+                [
+                  "Trapecio",
+                  "4 x 8"
+                ],
+                [
+                  "Vuelos posteriores",
+                  "4 x 8"
+                ],
+                [
+                  "Tríceps en fondos",
+                  "4 x 8"
+                ],
+                [
+                  "Estocadas fijas",
+                  "4 x 8"
+                ],
+                [
+                  "Tríceps francés",
+                  "4 x 15"
+                ]
+              ]
+            },
+            {
+              "titulo": "Campo del día",
+              "texto": "Estocadas lento caminando con disco: 3 bloques de 7 min x 3 min de pausa."
+            }
           ]
         },
         "D3": {
           "titulo": "Día 3",
           "tipoDia": "fuerza+campo",
           "bloques": [
-            { "ref": "activacion" },
-            { "titulo": "Gimnasio", "filas": [
-              ["Press de hombros", "4 x 6"],
-              ["Vuelos laterales", "4 x 8"],
-              ["Sentadillas", "Según indicación del staff"],
-              ["Vuelos frontales", "4 x 8"],
-              ["Peso muerto", "Según indicación del staff"],
-              ["Tríceps", "4 x 8"],
-              ["Bíceps", "Según indicación del staff"],
-              ["Cuello en banco", "3 x 30 seg"]
-            ] },
-            { "titulo": "Campo del día", "texto": "Fibras lentas: 40 seg de trabajo x 40 seg de pausa, 8 repeticiones, 3 min de pausa, 2 series." }
+            {
+              "ref": "activacion"
+            },
+            {
+              "titulo": "Gimnasio",
+              "filas": [
+                [
+                  "Press de hombros",
+                  "4 x 6"
+                ],
+                [
+                  "Vuelos laterales",
+                  "4 x 8"
+                ],
+                [
+                  "Sentadillas",
+                  "4 x 8"
+                ],
+                [
+                  "Vuelos frontales",
+                  "4 x 8"
+                ],
+                [
+                  "Peso muerto",
+                  "4 x 8"
+                ],
+                [
+                  "Tríceps",
+                  "4 x 8"
+                ],
+                [
+                  "Bíceps",
+                  "4 x 8"
+                ],
+                [
+                  "Cuello en banco",
+                  "3 x 30 seg"
+                ]
+              ]
+            },
+            {
+              "titulo": "Campo del día",
+              "texto": "Fibras lentas: 40 seg x 40 seg x 8, con 3 min de pausa, x 2 series."
+            }
           ]
         },
         "D4": {
           "titulo": "Día 4 · Circuito full body",
           "tipoDia": "fuerza",
           "bloques": [
-            { "ref": "activacion" },
-            { "titulo": "Circuito (orden)", "filas": [
-              ["1. Plano", "10 reps"],
-              ["2. Dominada o remo", "10 reps"],
-              ["3. Abdominales", "30 seg"],
-              ["4. Espinales", "30 seg"],
-              ["5. Vuelos", "10 reps"],
-              ["6. Remo alto", "10 reps"],
-              ["7. Puente frontal con peso", "30 seg"],
-              ["8. Bíceps", "10 reps"],
-              ["9. Tríceps", "10 reps"],
-              ["10. Correr, bici o soga", "3 min"]
-            ] },
-            { "titulo": "Cómo se hace", "texto": "Circuito full body: de 4 a 8 vueltas en el menor tiempo posible, con la menor pausa posible entre series." }
+            {
+              "ref": "activacion"
+            },
+            {
+              "titulo": "Circuito (orden)",
+              "filas": [
+                [
+                  "1. Plano",
+                  "10 reps"
+                ],
+                [
+                  "2. Dominada o remo",
+                  "10 reps"
+                ],
+                [
+                  "3. Abdominales",
+                  "30 seg"
+                ],
+                [
+                  "4. Espinales",
+                  "30 seg"
+                ],
+                [
+                  "5. Vuelos",
+                  "10 reps"
+                ],
+                [
+                  "6. Remo alto",
+                  "10 reps"
+                ],
+                [
+                  "7. Puente frontal con peso",
+                  "30 seg"
+                ],
+                [
+                  "8. Bíceps",
+                  "10 reps"
+                ],
+                [
+                  "9. Tríceps",
+                  "10 reps"
+                ],
+                [
+                  "10. Correr, bici o soga",
+                  "3 min"
+                ]
+              ]
+            },
+            {
+              "titulo": "Cómo se hace",
+              "texto": "Hacé de 4 a 8 vueltas en el menor tiempo posible, con la menor pausa posible entre cada serie. Los ejercicios de fuerza son de 10 reps, los de zona media x 30 seg y el aeróbico x 3 min."
+            }
           ]
         }
       }
@@ -208,13 +408,21 @@
       "tipo": "entrenamiento",
       "inicio": "2027-01-04",
       "descripcion": "Enero 2027: 3 días de gimnasio por semana, 4 x 12.",
-      "descansoSeries": "Descanso entre series: hombros, bíceps y tríceps 60 seg; pecho, espalda y piernas 90 seg.",
+      "descansoSeries": "Descanso entre series: pecho, espalda y piernas 90 seg; hombros, bíceps y tríceps 60 seg.",
       "aConfirmar": [
         "Fecha exacta de inicio de hipertrofia (por defecto: lunes 4/1/2027).",
         "Qué día de la semana va cada sesión (por defecto: Día 1 lunes, Día 2 miércoles, Día 3 viernes).",
-        "Campo programado de enero (qué plan y opciones corresponden): a confirmar con el staff."
+        "Si en enero se suma además el campo programado (plan de 3 o 4 días): el PDF no lo indica."
       ],
-      "semanaTipo": { "lun": "D1", "mar": null, "mie": "D2", "jue": null, "vie": "D3", "sab": null, "dom": null },
+      "semanaTipo": {
+        "lun": "D1",
+        "mar": null,
+        "mie": "D2",
+        "jue": null,
+        "vie": "D3",
+        "sab": null,
+        "dom": null
+      },
       "diasCampo": [],
       "campoProgramado": [],
       "sesiones": {
@@ -222,54 +430,146 @@
           "titulo": "Día 1",
           "tipoDia": "fuerza+campo",
           "bloques": [
-            { "ref": "activacion" },
-            { "titulo": "Gimnasio", "filas": [
-              ["Plano", "4 x 10-8-8-6"],
-              ["Inclinado", "4 x 12"],
-              ["Flexiones con peso", "Según indicación del staff"],
-              ["Pullover", "4 x 12 + 20 seg"],
-              ["Cuello con banda lateral", "Según indicación del staff"],
-              ["Bíceps con mancuernas alternado", "4 x 12"],
-              ["Puente de glúteo en banco", "Según indicación del staff"],
-              ["Bíceps con barra", "4 x 15"]
-            ] },
-            { "titulo": "Campo del día", "texto": "Cambios de ritmo 25 min: 40 seg de trote x 20 seg más rápido, más 10 min de zona media." }
+            {
+              "ref": "activacion"
+            },
+            {
+              "titulo": "Gimnasio",
+              "filas": [
+                [
+                  "Plano",
+                  "4 x 10-8-8-6"
+                ],
+                [
+                  "Inclinado",
+                  "4 x 12"
+                ],
+                [
+                  "Flexiones con peso",
+                  "4 x 12"
+                ],
+                [
+                  "Pullover",
+                  "4 x 12"
+                ],
+                [
+                  "Cuello con banda lateral",
+                  "4 x 12 + 20 seg"
+                ],
+                [
+                  "Bíceps con mancuernas alternado",
+                  "4 x 12"
+                ],
+                [
+                  "Puente de glúteo en banco",
+                  "4 x 12"
+                ],
+                [
+                  "Bíceps con barra",
+                  "4 x 15"
+                ]
+              ]
+            },
+            {
+              "titulo": "Campo del día",
+              "texto": "Cambios de ritmo 25 min: 40 seg de trote x 20 seg más rápido, + 10 min de zona media."
+            }
           ]
         },
         "D2": {
           "titulo": "Día 2",
           "tipoDia": "fuerza+campo",
           "bloques": [
-            { "ref": "activacion" },
-            { "titulo": "Gimnasio", "filas": [
-              ["Dominadas con peso", "4 x 10-8-8-6"],
-              ["Remo bajo con barra", "4 x 12"],
-              ["Remo alto", "Según indicación del staff"],
-              ["Trapecio", "4 x 12"],
-              ["Vuelos posteriores", "Según indicación del staff"],
-              ["Tríceps en fondos", "4 x 12"],
-              ["Estocadas fijas", "Según indicación del staff"],
-              ["Tríceps francés", "4 x 15"]
-            ] },
-            { "titulo": "Campo del día", "texto": "Estocadas lentas caminando con disco: 3 bloques de 7 min con 3 min de pausa." }
+            {
+              "ref": "activacion"
+            },
+            {
+              "titulo": "Gimnasio",
+              "filas": [
+                [
+                  "Dominadas con peso",
+                  "4 x 10-8-8-6"
+                ],
+                [
+                  "Remo bajo 1 B",
+                  "4 x 12"
+                ],
+                [
+                  "Remo alto",
+                  "4 x 12"
+                ],
+                [
+                  "Trapecio",
+                  "4 x 12"
+                ],
+                [
+                  "Vuelos posteriores",
+                  "4 x 12"
+                ],
+                [
+                  "Tríceps en fondos",
+                  "4 x 12"
+                ],
+                [
+                  "Estocadas fijas",
+                  "4 x 12"
+                ],
+                [
+                  "Tríceps francés",
+                  "4 x 15"
+                ]
+              ]
+            },
+            {
+              "titulo": "Campo del día",
+              "texto": "Estocadas lento caminando con disco: 3 bloques de 7 min x 3 min de pausa."
+            }
           ]
         },
         "D3": {
           "titulo": "Día 3",
           "tipoDia": "fuerza",
           "bloques": [
-            { "ref": "activacion" },
-            { "titulo": "Gimnasio", "filas": [
-              ["Press de hombros", "4 x 12"],
-              ["Vuelos laterales", "4 x 12"],
-              ["Sentadillas", "4 x 12"],
-              ["Vuelos frontales", "4 x 12"],
-              ["Peso muerto", "4 x 12"],
-              ["Tríceps", "4 x 12"],
-              ["Bíceps", "4 x 12"],
-              ["Cuello en banco", "3 x 30 seg"]
-            ] },
-            { "titulo": "Campo del día", "texto": "Sin campo indicado para este día en el plan (a confirmar)." }
+            {
+              "ref": "activacion"
+            },
+            {
+              "titulo": "Gimnasio",
+              "filas": [
+                [
+                  "Press de hombros",
+                  "4 x 12"
+                ],
+                [
+                  "Vuelos laterales",
+                  "4 x 12"
+                ],
+                [
+                  "Sentadillas",
+                  "4 x 12"
+                ],
+                [
+                  "Vuelos frontales",
+                  "4 x 12"
+                ],
+                [
+                  "Peso muerto",
+                  "4 x 12"
+                ],
+                [
+                  "Tríceps",
+                  "4 x 12"
+                ],
+                [
+                  "Bíceps",
+                  "4 x 12"
+                ],
+                [
+                  "Cuello en banco",
+                  "3 x 30 seg"
+                ]
+              ]
+            }
           ]
         }
       }
