@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Entreno de Santi</title>
+  <meta name="description" content="Plan físico de Santi Zalazar (San Carlos): lo que toca hoy.">
+  <meta name="theme-color" content="#0f1115">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Entreno">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">🏉 Entreno de Santi</div>
+    <nav class="tabs" role="tablist">
+      <button id="tab-hoy" class="tab" data-vista="hoy">Hoy</button>
+      <button id="tab-semana" class="tab" data-vista="semana">Semana</button>
+    </nav>
+  </header>
+  <div class="nav-fecha">
+    <button id="prev" aria-label="Anterior">‹</button>
+    <label class="fecha-pick"><span id="fecha-label"></span><input id="fecha" type="date" aria-label="Elegir fecha"></label>
+    <button id="next" aria-label="Siguiente">›</button>
+  </div>
+  <button id="volver" class="volver" hidden>Volver a hoy</button>
+  <main id="app" aria-live="polite"><p class="cargando">Cargando plan…</p></main>
+  <footer class="pie" id="pie"></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
