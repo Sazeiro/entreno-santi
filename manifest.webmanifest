@@ -1,15 +1,25 @@
 {
-  "name": "Entreno de Santi",
-  "short_name": "Entreno",
-  "description": "Lo que toca entrenar hoy según el plan físico de San Carlos.",
+  "name": "Entreno Santi · Club San Carlos",
+  "short_name": "Santi",
+  "description": "Lo que toca entrenar hoy según el plan físico del Plantel Superior de Club San Carlos.",
   "lang": "es-AR",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0f1115",
-  "theme_color": "#0f1115",
+  "background_color": "#0B1F8F",
+  "theme_color": "#0B1F8F",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }

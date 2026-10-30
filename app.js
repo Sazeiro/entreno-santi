@@ -69,7 +69,7 @@ function vistaDia(d) {
   let h = cabecera(d);
   if (d.tipo === "descanso") {
     h += `<section class="card"><p class="big">😴 Descanso</p><p>${txt(plan.config.mensajeDescanso || "Día libre.")}</p>
-      ${d.faltan > 0 ? `<p>Arrancás el plan el <b>${fechaLinda(d.inicioPlan)}</b> (en ${d.faltan} día${d.faltan === 1 ? "" : "s"}).</p>` : ""}</section>` + avisoInicio();
+      ${d.faltan > 0 ? `<p>El plan arranca el <b>${fechaLinda(d.inicioPlan)}</b> (en ${d.faltan} día${d.faltan === 1 ? "" : "s"}).</p>` : ""}</section>` + avisoInicio();
     return h;
   }
   if (d.tipo !== "entrenamiento") {
@@ -122,7 +122,7 @@ async function init() {
   try { plan = await cargarPlan(); } catch (e) { $("#app").innerHTML = `<section class="card aviso">No pude cargar el plan. Revisá la conexión y recargá.</section>`; return; }
   hoy = hoyEnZona(plan.config.zonaHoraria);
   leerUrl();
-  $("#pie").textContent = `Plan actualizado al ${fechaCorta(plan.actualizado)} · zona horaria Buenos Aires`;
+  $("#pie").textContent = `Club San Carlos · Plantel Superior · plan actualizado al ${fechaCorta(plan.actualizado)} · hora de Buenos Aires`;
   document.querySelectorAll(".tab").forEach((b) => b.onclick = () => irA(b.dataset.vista, fecha));
   $("#prev").onclick = () => irA(vista, sumarDias(fecha, vista === "hoy" ? -1 : -7));
   $("#next").onclick = () => irA(vista, sumarDias(fecha, vista === "hoy" ? 1 : 7));

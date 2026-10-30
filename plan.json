@@ -6,7 +6,7 @@
     "inicioPlan": "2026-11-09",
     "inicioPlanConfirmado": false,
     "zonaHoraria": "America/Argentina/Buenos_Aires",
-    "mensajeDescanso": "Sos campeón de Primera: tenés 2 semanas libres de trabajo físico. Descansá, dormí bien y comé rico.",
+    "mensajeDescanso": "Fin de temporada: el plantel tiene 2 semanas libres de trabajo físico. Descansen, duerman bien y coman rico; después arranca la postemporada.",
     "notaCalendario": "Calendario orientativo: algunos jugadores se suman después a la postemporada."
   },
   "bloques": {
@@ -146,7 +146,7 @@
       "nombre": "Descanso",
       "tipo": "descanso",
       "inicio": "2026-10-26",
-      "descripcion": "2 semanas libres de trabajo físico (campeón de Primera)."
+      "descripcion": "2 semanas libres de trabajo físico para el plantel, antes de la postemporada."
     },
     {
       "id": "fuerza",

@@ -3,24 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Entreno de Santi</title>
-  <meta name="description" content="Plan físico de Santi Zalazar (San Carlos): lo que toca hoy.">
-  <meta name="theme-color" content="#0f1115">
+  <title>Entreno Santi · Club San Carlos</title>
+  <meta name="description" content="Plan físico del Plantel Superior de Club San Carlos: lo que toca entrenar hoy.">
+  <meta name="theme-color" content="#0B1F8F">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icons/icon-192.png">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Entreno">
+  <meta name="apple-mobile-web-app-title" content="Santi">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="top">
-    <div class="brand">🏉 Entreno de Santi</div>
+    <div class="brand"><img src="icons/escudo.png" alt="Escudo Club San Carlos" width="33" height="40"><div><b>Entreno Santi</b><small>Club San Carlos</small></div></div>
     <nav class="tabs" role="tablist">
       <button id="tab-hoy" class="tab" data-vista="hoy">Hoy</button>
       <button id="tab-semana" class="tab" data-vista="semana">Semana</button>
     </nav>
   </header>
+  <div class="franja" aria-hidden="true"></div>
   <div class="nav-fecha">
     <button id="prev" aria-label="Anterior">‹</button>
     <label class="fecha-pick"><span id="fecha-label"></span><input id="fecha" type="date" aria-label="Elegir fecha"></label>
