@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "actualizado": "2026-10-29",
-  "fuente": "Club San Carlos · Planificación física Plantel Superior · Postemporada 2026 / Pretemporada 2027 (PDF del staff, versión actualizada)",
+  "actualizado": "2026-11-02",
+  "fuente": "Club San Carlos · Planificación física Plantel Superior · Postemporada 2026 / Pretemporada 2027 (PDF del staff, versión actualizada) + Plan Gym Seven San Carlos (recibido 2/11/2026)",
   "config": {
-    "inicioPlan": "2026-11-09",
+    "inicioPlan": "2026-11-23",
     "inicioPlanConfirmado": false,
     "zonaHoraria": "America/Argentina/Buenos_Aires",
-    "mensajeDescanso": "Fin de temporada: el plantel tiene 2 semanas libres de trabajo físico. Descansen, duerman bien y coman rico; después arranca la postemporada.",
+    "mensajeDescanso": "Fin de temporada: semanas libres de trabajo físico. Descansen, duerman bien y coman rico.",
     "notaCalendario": "Calendario orientativo: algunos jugadores se suman después a la postemporada."
   },
   "bloques": {
@@ -146,18 +146,310 @@
       "nombre": "Descanso",
       "tipo": "descanso",
       "inicio": "2026-10-26",
-      "descripcion": "2 semanas libres de trabajo físico para el plantel, antes de la postemporada."
+      "descripcion": "Semanas libres de trabajo físico para el plantel, antes del plan del Seven."
+    },
+    {
+      "id": "seven",
+      "nombre": "Seven",
+      "tipo": "entrenamiento",
+      "inicio": "2026-11-02",
+      "descripcion": "Plan Gym Seven San Carlos: 3 días de gimnasio (Día 1 upper body, Día 2 lower body, Día 3 full body) hasta el Seven del 21/11/2026. Sin campo programado.",
+      "selectorManual": true,
+      "notaSugerencia": "Sugerencia por defecto (a confirmar): lunes Día 1, miércoles Día 2, viernes Día 3. Podés elegir otra sesión con los botones.",
+      "aConfirmar": [
+        "Qué día de la semana va cada sesión: el plan no lo indica (sugerencia por defecto: lunes Día 1, miércoles Día 2, viernes Día 3)."
+      ],
+      "semanaTipo": {
+        "lun": "D1",
+        "mar": null,
+        "mie": "D2",
+        "jue": null,
+        "vie": "D3",
+        "sab": null,
+        "dom": null
+      },
+      "diasCampo": [],
+      "campoProgramado": [],
+      "sesiones": {
+        "D1": {
+          "titulo": "Día 1 · Upper body",
+          "tipoDia": "fuerza",
+          "bloques": [
+            {
+              "titulo": "Entrada en calor",
+              "filas": [
+                [
+                  "1. Remo renegade",
+                  "2 x 6"
+                ],
+                [
+                  "2. Cuello con banda",
+                  "2 x 10 seg por lado"
+                ],
+                [
+                  "3. Apertura posterior en TRX",
+                  "2 x 10"
+                ],
+                [
+                  "4. Movilidad de hombros con banda",
+                  "2 x 10"
+                ]
+              ]
+            },
+            {
+              "titulo": "Superserie A",
+              "filas": [
+                [
+                  "1A. Press de pecho",
+                  "4 x 5"
+                ],
+                [
+                  "2A. Dominadas con peso TP",
+                  "4 x 5"
+                ]
+              ],
+              "nota": "Press de pecho: subir cargas en cada serie."
+            },
+            {
+              "titulo": "Superserie B",
+              "filas": [
+                [
+                  "1B. Press inclinado M",
+                  "3 x 10"
+                ],
+                [
+                  "2B. Remo a 1 brazo",
+                  "3 x 10"
+                ]
+              ]
+            },
+            {
+              "titulo": "Superserie C",
+              "filas": [
+                [
+                  "1C. Press Arnold",
+                  "3 x 10"
+                ],
+                [
+                  "2C. Hombros circular",
+                  "3 x 10"
+                ],
+                [
+                  "3C. Posterior",
+                  "3 x 10"
+                ]
+              ]
+            },
+            {
+              "titulo": "Circuito ABS",
+              "filas": [
+                [
+                  "Plancha frontal",
+                  "3 x 30 seg"
+                ],
+                [
+                  "Plancha lateral (por lado)",
+                  "3 x 30 seg"
+                ]
+              ]
+            },
+            {
+              "titulo": "Preventivo hombro",
+              "filas": [
+                [
+                  "Y-T-W",
+                  "2 x 10"
+                ]
+              ]
+            },
+            {
+              "titulo": "Playa",
+              "filas": [
+                [
+                  "Bíceps",
+                  "3 x 10"
+                ],
+                [
+                  "Tríceps",
+                  "3 x 10"
+                ]
+              ]
+            }
+          ]
+        },
+        "D2": {
+          "titulo": "Día 2 · Lower body",
+          "tipoDia": "fuerza",
+          "bloques": [
+            {
+              "titulo": "Entrada en calor",
+              "filas": [
+                [
+                  "1. Técnica de carrera",
+                  "5 min"
+                ],
+                [
+                  "2. Peso muerto + sentadilla",
+                  "2 x 3"
+                ],
+                [
+                  "3. Estocada dinámica",
+                  "2 x 8"
+                ],
+                [
+                  "4. Nórdico post",
+                  "2 x 8"
+                ]
+              ]
+            },
+            {
+              "titulo": "Superserie A",
+              "filas": [
+                [
+                  "1A. Saltos en altura",
+                  "3 x 3"
+                ],
+                [
+                  "2A. Paloma",
+                  "3 x 5"
+                ]
+              ]
+            },
+            {
+              "titulo": "Superserie B",
+              "filas": [
+                [
+                  "1B. Cargadas desde el piso",
+                  "4 x 3"
+                ],
+                [
+                  "2B. Gemelos ind con peso",
+                  "4 x 12"
+                ]
+              ],
+              "nota": "Cargadas: subir cargas en cada serie."
+            },
+            {
+              "titulo": "Serie C",
+              "filas": [
+                [
+                  "1C. Sentadilla post",
+                  "4 x 8"
+                ]
+              ]
+            },
+            {
+              "titulo": "Superserie D",
+              "filas": [
+                [
+                  "1D. Puente isquio",
+                  "3 x 10"
+                ],
+                [
+                  "2D. Plancha Copenhague",
+                  "3 x 15 seg"
+                ]
+              ]
+            },
+            {
+              "titulo": "Circuito ABS (3 x 10)",
+              "filas": [
+                [
+                  "Elevación de piernas extendidas alternadas",
+                  "3 x 10"
+                ],
+                [
+                  "Plancha lateral hip up",
+                  "3 x 10"
+                ],
+                [
+                  "Pallof",
+                  "3 x 10"
+                ],
+                [
+                  "Plancha baja",
+                  "3 x 10"
+                ]
+              ]
+            }
+          ]
+        },
+        "D3": {
+          "titulo": "Día 3 · Full body",
+          "tipoDia": "fuerza",
+          "bloques": [
+            {
+              "titulo": "Entrada en calor",
+              "filas": [
+                [
+                  "1. Técnica de carrera",
+                  "7 min"
+                ]
+              ]
+            },
+            {
+              "titulo": "Serie 1",
+              "filas": [
+                [
+                  "Cargadas aumentando carga",
+                  "3 x 3"
+                ]
+              ]
+            },
+            {
+              "titulo": "Superserie 2",
+              "filas": [
+                [
+                  "2A. Sentadilla aumentando (80%)",
+                  "3 x 3"
+                ],
+                [
+                  "2B. Saltos al cajón",
+                  "3 x 2"
+                ]
+              ]
+            },
+            {
+              "titulo": "Serie 3",
+              "filas": [
+                [
+                  "Peso muerto",
+                  "3 x 5"
+                ]
+              ]
+            },
+            {
+              "titulo": "Serie 4",
+              "filas": [
+                [
+                  "ABS a elección",
+                  "4 x 10"
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "post-seven",
+      "nombre": "Después del Seven",
+      "tipo": "descanso",
+      "inicio": "2026-11-22",
+      "descripcion": "Día libre después del Seven.",
+      "mensaje": "Después del Seven arranca la postemporada (fecha a definir). Mientras tanto, descanso y recuperación."
     },
     {
       "id": "fuerza",
       "nombre": "Fuerza",
       "tipo": "entrenamiento",
       "inicio": "@inicioPlan",
-      "descripcion": "Noviembre-diciembre 2026: 4 días de gimnasio por semana + campo.",
+      "descripcion": "Postemporada noviembre-diciembre 2026, después del Seven: 4 días de gimnasio por semana + campo. Fecha de inicio a definir.",
       "descansoSeries": "Descanso entre series: pecho, espalda y piernas 120 seg; hombros, bíceps y tríceps 90 seg.",
       "aConfirmar": [
+        "Fecha de inicio después del Seven: a definir (por ahora se muestra desde el lunes 23/11/2026, orientativo).",
         "Qué día de la semana va cada sesión (por defecto: Día 1 lunes, Día 2 martes, Día 3 jueves, Día 4 viernes).",
-        "Semanas 5 a 8 de nov-dic: se repite el plan de campo de 4 semanas desde la semana 1 (el plan tiene solo 4 semanas; a confirmar con el staff)."
+        "Con inicio el 23/11 la fase dura 6 semanas (hasta el 3/1): en las semanas 5 y 6 se repite el plan de campo de 4 semanas desde la semana 1 (a confirmar con el staff)."
       ],
       "semanaTipo": {
         "lun": "D1",

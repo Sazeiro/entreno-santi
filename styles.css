@@ -53,3 +53,7 @@ details summary{cursor:pointer;font-weight:700;color:var(--navy)}
 .volver[hidden]{display:none}
 @media (max-width:360px){.brand small{display:none}.tab{padding:7px 11px}}
 .brand>div{min-width:0}
+.selector{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sel{font:inherit;font-weight:800;font-size:16px;padding:12px 6px;border-radius:12px;border:2px solid var(--navy2);background:#fff;color:var(--navy2);cursor:pointer}
+.sel.on{background:var(--navy2);color:#fff;border-color:var(--navy2);box-shadow:inset 0 -4px 0 var(--gold)}
+.link{font:inherit;background:none;border:0;padding:0;color:var(--navy2);text-decoration:underline;font-weight:700;cursor:pointer}

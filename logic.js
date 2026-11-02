@@ -89,8 +89,9 @@ export function diaDelPlan(iso, plan) {
   const dia = diaSemana(iso);
   const base = { fecha: iso, dia, semanaPlan: semanaRelativa(iso, plan.config.inicioPlan), siguiente };
   if (!fase || fase.tipo === "descanso") {
-    const inicio = plan.config.inicioPlan;
-    return { ...base, tipo: "descanso", fase, faltan: Math.max(0, aDia(inicio) - aDia(iso)), inicioPlan: inicio };
+    // Cuenta regresiva hasta la próxima fase (o hasta inicioPlan si no hay ninguna cargada).
+    const inicio = siguiente ? siguiente.inicioIso : plan.config.inicioPlan;
+    return { ...base, tipo: "descanso", fase, faltan: Math.max(0, aDia(inicio) - aDia(iso)), inicioPlan: inicio, proxima: siguiente };
   }
   const semanaFase = semanaRelativa(iso, fase.inicioIso);
   if (fase.tipo !== "entrenamiento") return { ...base, tipo: fase.tipo, fase, semanaFase };
@@ -99,8 +100,16 @@ export function diaDelPlan(iso, plan) {
   const sesion = resolverSesion(semanaTipo[dia], fase);
   return {
     ...base, tipo: "entrenamiento", fase, semanaFase, especial: especial || null,
-    sesion, campo: campoDe(fase, semanaFase, dia, plan, especial),
+    sesion, sugerida: !!(fase.selectorManual && sesion),
+    opcionesSesion: fase.selectorManual ? Object.keys(fase.sesiones || {}) : [],
+    campo: campoDe(fase, semanaFase, dia, plan, especial),
   };
+}
+
+// Sesión elegida a mano (fases con selectorManual). Si el id no existe, queda la sugerida.
+export function conEleccion(d, id) {
+  if (!id || !d.fase || !d.fase.selectorManual || !d.fase.sesiones || !d.fase.sesiones[id]) return d;
+  return { ...d, sesion: { id, ...d.fase.sesiones[id] }, sugerida: false, elegida: true };
 }
 
 export function semanaDelPlan(iso, plan) {

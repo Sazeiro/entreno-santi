@@ -1,4 +1,4 @@
-import { hoyEnZona, diaDelPlan, semanaDelPlan, sumarDias, lunesDe, fechaLinda, fechaCorta, DIAS_LARGO } from "./logic.js";
+import { hoyEnZona, diaDelPlan as diaBase, semanaDelPlan as semanaBase, conEleccion, sumarDias, lunesDe, fechaLinda, fechaCorta, DIAS_LARGO } from "./logic.js";
 
 const $ = (s) => document.querySelector(s);
 const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -31,6 +31,20 @@ function bloque(b) {
   return h + "</section>";
 }
 
+// Sesión elegida a mano (fases con selectorManual, ej. Seven): se guarda por fecha en este teléfono.
+const keySesion = (f) => "sesion:" + f;
+const elegida = (f) => { try { return localStorage.getItem(keySesion(f)); } catch { return null; } };
+const diaDelPlan = (f, p) => conEleccion(diaBase(f, p), elegida(f));
+const semanaDelPlan = (f, p) => semanaBase(f, p).map((d) => conEleccion(d, elegida(d.fecha)));
+
+function selectorSesion(d) {
+  if (!d.fase || !d.fase.selectorManual) return "";
+  const ids = d.opcionesSesion || Object.keys(d.fase.sesiones || {});
+  const act = d.sesion && d.sesion.id;
+  return `<section class="card"><h2>Elegí tu sesión</h2><div class="selector">${ids.map((id) => `<button class="sel${id === act ? " on" : ""}" data-sesion="${id}" aria-pressed="${id === act}">${esc((d.fase.sesiones[id].titulo || id).split(" · ")[0])}</button>`).join("")}</div>
+    ${d.elegida ? `<p class="nota">Elegiste esta sesión a mano. <button class="link" data-sesion="">Volver a la sugerencia</button></p>` : d.fase.notaSugerencia ? `<p class="nota">${txt(d.fase.notaSugerencia)}</p>` : ""}</section>`;
+}
+
 const keyCampo = (f) => "campo:" + lunesDe(f);
 const hechas = (f) => { try { return JSON.parse(localStorage.getItem(keyCampo(f)) || "[]"); } catch { return []; } };
 
@@ -59,31 +73,38 @@ function cabecera(d) {
   return `<section class="card hero"><h1>${titulo}</h1><div class="sub">${fechaLinda(d.fecha)}</div><div class="chips">${chips.join("")}</div></section>`;
 }
 
-function avisoInicio() {
+function avisoInicio(d) {
+  // Solo en las fases que cuelgan de inicioPlan (postemporada) o en el descanso previo a ellas.
+  const f = d && (d.tipo === "descanso" ? d.proxima : d.fase);
+  if (!f || !String(f.inicio).startsWith("@inicioPlan")) return "";
   const cal = plan.config.notaCalendario ? `<section class="card"><p class="nota">${txt(plan.config.notaCalendario)}</p></section>` : "";
   if (plan.config.inicioPlanConfirmado) return cal;
-  return cal + `<section class="card aviso"><b>Fecha de inicio a confirmar:</b> el plan está calculado arrancando el ${fechaLinda(plan.config.inicioPlan)}. Si el staff confirma otra fecha, se actualiza y todo se recalcula solo.</section>`;
+  return cal + `<section class="card aviso"><b>Después del Seven: postemporada, fecha a definir.</b> Por ahora se muestra de forma <b>orientativa</b> arrancando el ${fechaLinda(plan.config.inicioPlan)}. Cuando el staff confirme la fecha, se actualiza y todo se recalcula solo.</section>`;
 }
 
 function vistaDia(d) {
   let h = cabecera(d);
   if (d.tipo === "descanso") {
-    h += `<section class="card"><p class="big">😴 Descanso</p><p>${txt(plan.config.mensajeDescanso || "Día libre.")}</p>
-      ${d.faltan > 0 ? `<p>El plan arranca el <b>${fechaLinda(d.inicioPlan)}</b> (en ${d.faltan} día${d.faltan === 1 ? "" : "s"}).</p>` : ""}</section>` + avisoInicio();
+    h += `<section class="card"><p class="big">😴 Descanso</p><p>${txt(d.fase && d.fase.mensaje || plan.config.mensajeDescanso || "Día libre.")}</p>
+      ${d.faltan > 0 ? `<p>${d.proxima ? esc(d.proxima.nombre) : "El plan"} arranca el <b>${fechaLinda(d.inicioPlan)}</b> (en ${d.faltan} día${d.faltan === 1 ? "" : "s"})${d.proxima && d.proxima.inicio === "@inicioPlan" && !plan.config.inicioPlanConfirmado ? ", fecha orientativa" : ""}.</p>` : ""}</section>` + avisoInicio(d);
     return h;
   }
   if (d.tipo !== "entrenamiento") {
     return h + `<section class="card"><p class="big">📋 ${esc(d.fase.nombre)}</p><p>${txt(d.fase.descripcion || "Plan a definir.")}</p><p>Plan <span class="aconf">a confirmar</span>: cuando llegue el plan nuevo del club se carga acá.</p></section>`;
   }
-  if (d.sesion) {
-    h += `<section class="card"><p class="big">🏋️ ${esc(d.sesion.titulo)}</p>${d.fase.descansoSeries ? `<p class="nota">${txt(d.fase.descansoSeries)}</p>` : ""}</section>`;
+  h += avisoInicio(d); // arriba de todo: la fecha post-Seven es orientativa
+  if (d.fase.selectorManual && !d.sesion) {
+    h += `<section class="card"><p class="big">Día libre</p><p>Hoy no hay sesión sugerida. Si querés entrenar, <b>elegí tu sesión</b> abajo.</p></section>` + selectorSesion(d);
+  } else if (d.sesion) {
+    h += selectorSesion(d);
+    h += `<section class="card"><p class="big">🏋️ ${esc(d.sesion.titulo)}</p>${d.sugerida ? `<p class="nota">Sesión sugerida para hoy (día <span class="aconf">a confirmar</span>).</p>` : ""}${d.fase.descansoSeries ? `<p class="nota">${txt(d.fase.descansoSeries)}</p>` : ""}</section>`;
     h += (d.sesion.bloques || []).map(bloque).join("");
   } else {
     h += `<section class="card"><p class="big">Sin gimnasio hoy</p><p>${d.campo ? "Si te toca, aprovechá para una sesión de campo." : "Descanso / recuperación."}</p></section>`;
   }
   h += campoCard(d);
   if (d.fase.aConfirmar && d.fase.aConfirmar.length) h += `<section class="card"><details><summary>Pendientes a confirmar de esta fase</summary><ul>${d.fase.aConfirmar.map((x) => `<li>${txt(x)}</li>`).join("")}</ul></details></section>`;
-  return h + avisoInicio();
+  return h;
 }
 
 function vistaSemana() {
@@ -94,12 +115,14 @@ function vistaSemana() {
     let s;
     if (d.tipo === "descanso") s = "Descanso";
     else if (d.tipo !== "entrenamiento") s = esc(d.fase.nombre) + " · a definir";
+    else if (d.fase.selectorManual) s = d.sesion ? "🏋️ " + esc(d.sesion.titulo) + (d.sugerida ? ' · sugerido, <span class="aconf">a confirmar</span>' : " · elegida") : "Día libre · elegí tu sesión";
     else s = (d.sesion ? "🏋️ " + esc(d.sesion.titulo) : "Sin gimnasio") + (d.campo && !d.campo.aConfirmar ? " · 🏃 campo opcional" : "");
     return `<button class="sem-dia${d.fecha === hoy ? " hoy" : ""}" data-ir="${d.fecha}"><div class="d">${DIAS_LARGO[d.dia]} ${fechaCorta(d.fecha)}${d.fecha === hoy ? " · hoy" : ""}</div><div class="s">${s}</div></button>`;
   }).join("");
   const c = dias.find((d) => d.campo && !d.campo.aConfirmar);
   if (c) h += `<section class="card"><h2>🏃 Campo de la semana</h2><p class="nota">${esc(c.campo.nombre)} · semana ${c.campo.semanaPlan}: elegí ${c.campo.sesionesPorSemana} opciones distintas.</p><ol>${c.campo.opciones.map((o) => `<li>${txt(o.texto)}</li>`).join("")}</ol></section>`;
-  return h + avisoInicio();
+  if (dias[0].fase && dias[0].fase.selectorManual) h += `<section class="card"><p class="nota">${txt(dias[0].fase.notaSugerencia || "")} Sin campo programado.</p></section>`;
+  return h + (dias.map(avisoInicio).find(Boolean) || "");
 }
 
 function render() {
@@ -128,7 +151,11 @@ async function init() {
   $("#next").onclick = () => irA(vista, sumarDias(fecha, vista === "hoy" ? 1 : 7));
   $("#fecha").onchange = (e) => e.target.value && irA(vista, e.target.value);
   $("#volver").onclick = () => irA(vista, hoy);
-  $("#app").addEventListener("click", (e) => { const b = e.target.closest("[data-ir]"); if (b) irA("hoy", b.dataset.ir); });
+  $("#app").addEventListener("click", (e) => {
+    const s = e.target.closest("[data-sesion]");
+    if (s) { try { s.dataset.sesion ? localStorage.setItem(keySesion(fecha), s.dataset.sesion) : localStorage.removeItem(keySesion(fecha)); } catch {} render(); return; }
+    const b = e.target.closest("[data-ir]"); if (b) irA("hoy", b.dataset.ir);
+  });
   $("#app").addEventListener("change", (e) => {
     const n = e.target.dataset && +e.target.dataset.op; if (!n) return;
     let d = hechas(fecha); d = e.target.checked ? [...new Set([...d, n])] : d.filter((x) => x !== n);
